@@ -10,6 +10,7 @@ public class PessoaPerfil implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "co_seq_pessoal_perfil")
     private Long id;
 
@@ -21,6 +22,7 @@ public class PessoaPerfil implements Serializable {
     private Pessoa pessoa;
 
     public PessoaPerfil() {
+    	
 		// TODO Auto-generated constructor stub
 	}
 

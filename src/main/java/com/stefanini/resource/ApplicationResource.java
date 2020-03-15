@@ -30,16 +30,16 @@ public class ApplicationResource extends Application{
 	    config.setScan(true);
 	}
     
-/*	@Override
+	@Override
 	public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new HashSet<Class<?>>();
         resources.add(ObjectMapperContextResolver.class);
-        resources.add(TesteResource.class);
-        resources.add(EnderecoTeste.class);
+        resources.add(PessoaResource.class);
+        resources.add(EnderecoResource.class);
         //swagger
         resources.add(ApiListingResource.class);
         resources.add(SwaggerSerializers.class);
 		return super.getClasses();
 	}
-	*/
+	
 }

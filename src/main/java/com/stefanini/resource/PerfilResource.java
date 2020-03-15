@@ -16,10 +16,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.stefanini.model.Endereco;
 import com.stefanini.model.Perfil;
-import com.stefanini.resource.util.ObjectMapperContextResolver;
 import com.stefanini.servico.PerfilServico;
 
 import io.swagger.annotations.Api;

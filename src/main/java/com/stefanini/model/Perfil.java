@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -40,16 +41,14 @@ public class Perfil implements Serializable {
      */
     
     @Column(name = "dt_hora_inclusao")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     @NotNull
-    private LocalDateTime dataHoraInclusao;
+    private LocalDate dataHoraInclusao;
     /**
      *
      */
     
     @Column(name = "dt_hora_alteracao")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
-    private LocalDateTime dataHoraAlteracao;
+    private LocalDate dataHoraAlteracao;
 
 //    /**
 //     * Mapeamento de Pessoa
@@ -61,7 +60,7 @@ public class Perfil implements Serializable {
     public Perfil() {
     }
 
-    public Perfil(@NotNull String nome, @NotNull String descricao, @NotNull LocalDateTime dataHoraInclusao, LocalDateTime dataHoraAlteracao) {
+    public Perfil(@NotNull String nome, @NotNull String descricao, @NotNull LocalDate dataHoraInclusao, LocalDate dataHoraAlteracao) {
         this.nome = nome;
         this.descricao = descricao;
         this.dataHoraInclusao = dataHoraInclusao;
@@ -101,19 +100,19 @@ public class Perfil implements Serializable {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getDataHoraInclusao() {
+    public LocalDate getDataHoraInclusao() {
         return dataHoraInclusao;
     }
 
-    public void setDataHoraInclusao(LocalDateTime dataHoraInclusao) {
+    public void setDataHoraInclusao(LocalDate dataHoraInclusao) {
         this.dataHoraInclusao = dataHoraInclusao;
     }
 
-    public LocalDateTime getDataHoraAlteracao() {
+    public LocalDate getDataHoraAlteracao() {
         return dataHoraAlteracao;
     }
 
-    public void setDataHoraAlteracao(LocalDateTime dataHoraAlteracao) {
+    public void setDataHoraAlteracao(LocalDate dataHoraAlteracao) {
         this.dataHoraAlteracao = dataHoraAlteracao;
     }
 

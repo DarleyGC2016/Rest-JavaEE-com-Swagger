@@ -27,7 +27,7 @@ public class PerfilServico implements Serializable {
 	@Inject
 	private PerfilDao dao;
 	
-	
+	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 //	@Override
 	public Optional<Perfil>  salvar(Perfil entity) {
 		return dao.salvar(entity);
